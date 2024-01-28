@@ -1,20 +1,15 @@
-  import {troops} from '../js/card.js'
+import { clashRoyaleCards } from "../js/card.js";
 
-const Domselectors = {
-  troop: document.querySelector("#app"),
-};
+function generateRandomCard() {
+  const randomIndex = Math.floor(Math.random() * clashRoyaleCards.length);
+  return clashRoyaleCards[randomIndex];
+}
 
-Domselectors.troop.addEventListener("click", () =>{   //click this button to generate a random card that you should use in your next deck
-function Algorithm(x) {
-  Domselectors.troop.innerHTML = "";
-  x.forEach((troops) => {
-    Domselectors.troop.insertAdjacentHTML(
-      "beforeend",
-      ` <div class="card">
-        </div>`
-    );
-  });
-}}
-)
+function updateCardDisplay() {
+  const cardDisplay = document.getElementById("cardDisplay");
+  const randomCard = generateRandomCard();
+  cardDisplay.textContent = "Generated Card: " + randomCard.name;
+}
 
-troops.forEach(Algorithm);
+const generateButton = document.getElementById("generateButton");
+generateButton.addEventListener("click", updateCardDisplay);
