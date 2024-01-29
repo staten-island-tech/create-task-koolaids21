@@ -1,4 +1,4 @@
-let clashRoyaleCards = 
+let troops = 
 [
     {
         "key": "knight",
@@ -1561,4 +1561,4 @@ let clashRoyaleCards =
         "is_evolved": false
     }
 ]
-export{clashRoyaleCards}
+export{troops}
