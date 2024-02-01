@@ -9,6 +9,7 @@ function generatecard() {
   const randomIndex = Math.floor(Math.random() * troops.length);
   return troops[randomIndex];
 }
+
 function generatenewcard() {
   // function will generate a new card when the button is pressed
   const randomCard = generatecard();
