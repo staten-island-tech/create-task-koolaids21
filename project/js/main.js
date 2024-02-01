@@ -2,6 +2,8 @@ import { troops } from "../js/card.js";
 
 const Domselectors = {
   CARDDISPLAY: document.getElementById("cardDisplay"),
+  PreviouslyGeneratedCard: document.getElementById("generatedcards"),
+  generatebutton: document.getElementById("generateButton"),
 }
 
 function generatecard() {
@@ -10,15 +12,24 @@ function generatecard() {
   return troops[randomIndex];
 }
 
-function generatenewcard() {
+function generatenew() {
   // function will generate a new card when the button is pressed
   const randomCard = generatecard();
-  Domselectors.CARDDISPLAY.innerHTML=
-      `Generated Card: 
+  Domselectors.CARDDISPLAY.insertAdjacentHTML=
+      `
+      <div class ="card">
+      <p>Generated Card: 
       ${randomCard.name}
        Description:
-      ${randomCard.description}`
+      ${randomCard.description}<p/>
+      </div>`
   
 }
-const generateButton = document.getElementById("generateButton");
-generateButton.addEventListener("click", generatenewcard);
+generateButton.addEventListener("click", generatenew);
+
+
+for (let i = 0; i < troops.length; i++){
+  if( i === 30 ){
+
+  }
+}

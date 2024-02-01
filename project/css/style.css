@@ -55,8 +55,21 @@ h1 {
 }
 
 .card {
-  padding: 2em;
-}
+  display: flex;
+  margin: 3rem 0;
+  height: 560px;
+  width: 27vw;
+  background-color: rgba(65, 65, 150, 0.6);
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  transition: 1s;
+  transition-duration: 0.5s;
+  overflow: visible;
+  border-radius: 12px;
+  gap: 1px;
+} 
 
 .read-the-docs {
   color: #888;
