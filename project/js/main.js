@@ -6,15 +6,11 @@ const Domselectors = {
 };
 
 function generatecard() {
-  // function generates a card by selecting a random array inside the big array troops by using math random.
   const randomIndex = Math.floor(Math.random() * troops.length);
   return troops[randomIndex];
 }
 
-Domselectors.generatebutton.addEventListener("click", generatenew);
-
 function generatenew() {
-  // function will generate a new card when the button is pressed
   const randomCard = generatecard();
   Domselectors.CARDDISPLAY.insertAdjacentHTML(
     "beforeend",
@@ -40,3 +36,4 @@ function cardlimit() {
     }
   }
 }
+Domselectors.generatebutton.addEventListener("click", generatenew);
